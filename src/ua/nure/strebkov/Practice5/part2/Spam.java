@@ -37,9 +37,8 @@ public class Spam {
 		spam.start();
 		System.setIn(new ByteArrayInputStream(System.lineSeparator().getBytes("Cp1251")));
 		BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
-	    consoleReader.readLine();
-	    
-		Thread.sleep(5000);
+	    consoleReader.readLine();	   
+		//Thread.sleep(5000);
 		
 		/*Scanner sc = new Scanner(System.in);		
 		sc.nextLine();
