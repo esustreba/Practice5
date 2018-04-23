@@ -1,9 +1,7 @@
-package ua.nure.strebkov.Practice5.Part6;
+package ua.nure.strebkov.Practice5.part6;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import java.util.Scanner;
 
 public class Part6 extends Thread {
 

@@ -1,8 +1,54 @@
 package ua.nure.strebkov.Practice5.part3;
 
-public class Part3 {
+public class Part3 extends Thread {
+	private Counter counter;
 
-	public static void main(String[] args) {
+	Part3(Counter c) {
+		counter = c;
+	}
+	 @Override
+    public void run() {
+        while (true) {
+            System.out.println(getName() + " " + (counter.getCounter1() == counter.getCounter2()));
+            counter.addCounter1();
+            try {
+                sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            counter.addCounter2();
+        }
+    }
+
+
+
+	/*@Override
+	public void run() {
+		while (true){
+			synchronized (counter){
+				System.out.println(getName() + " " + (counter.getCounter1() == counter.getCounter2()));
+				counter.addCounter1();
+				try {
+					sleep(10);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				counter.addCounter2();
+			}
+		}
+	}*/
+
+	public static void main(String[] args) throws InterruptedException {
+		Counter counter = new Counter();
+		Thread t1 = new Part3(counter);
+		Thread t2 = new Part3(counter);
+		Thread t3 = new Part3(counter);
+		t1.start();
+		t2.start();
+		t3.start();
+		t1.join();
+		t2.join();
+		t3.join();
 
 	}
 

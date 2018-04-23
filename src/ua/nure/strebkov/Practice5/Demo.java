@@ -1,6 +1,6 @@
 package ua.nure.strebkov.Practice5;
 
-import ua.nure.strebkov.Practice5.Part6.Part6;
+import ua.nure.strebkov.Practice5.part6.Part6;
 import ua.nure.strebkov.Practice5.part1.Part1;
 import ua.nure.strebkov.Practice5.part2.Part2;
 import ua.nure.strebkov.Practice5.part3.Part3;
@@ -25,7 +25,7 @@ public class Demo {
 		System.out.println("~~~~~~~~~~~~Part5");
 		Part5.main(args);		
 
-		System.out.println("~~~~~~~~~~~~Part6");
+		System.out.println("~~~~~~~~~~~~part6");
 		Part6.main(args);		
 	}
 
