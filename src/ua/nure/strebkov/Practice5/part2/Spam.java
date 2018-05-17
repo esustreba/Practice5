@@ -4,8 +4,7 @@ import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.util.Scanner;
+
 
 public class Spam {
 	private long[] times;
@@ -38,13 +37,9 @@ public class Spam {
 		System.setIn(new ByteArrayInputStream(System.lineSeparator().getBytes("Cp1251")));
 		BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
 	    consoleReader.readLine();	   
-		//Thread.sleep(5000);
-		
-		/*Scanner sc = new Scanner(System.in);		
-		sc.nextLine();
+		Thread.sleep(5000);				
 		spam.stop();
-		sc.close()*/;
-
+		
 	}
 
 	private class MyThread extends Thread {
